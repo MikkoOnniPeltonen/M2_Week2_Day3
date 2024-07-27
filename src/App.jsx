@@ -2,27 +2,19 @@
 import './App.css'
 import { useState } from 'react'
 
+import {Routes, Route} from 'react-router-dom'
+import AboutPage from './pages/AboutPage'
+
 function App() {
 
-  let [count,setCount] = useState(0)
-  
 
-
-
-  let student = {
-    name:"Toni",
-    languages:["English","Spansish"]
-  }
-
-  let {name, languages} = student
-  console.log(languages)
-
-
-  let myStudents = ["Judi","Toni","Lee"]
-  let [student1,student2,student3] = myStudents
-  console.log(student2)
   return (
     <>
+
+      <Routes>
+        <Route path="/about" element={<AboutPage/>}/>
+        {/* Exercise 1: Create route for /homepage that displays the HomePage component */}
+      </Routes>
       
     </>
   )
